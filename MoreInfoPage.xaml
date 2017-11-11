@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage  xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:behaviors="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    x:Class="WeatherApp.Views.MoreInfoPage">
+    <StackLayout>
+        <Button
+            Text="Go Back!"
+            Command="{Binding GoBackCommand}" />
+        <Label
+            Text="{Binding WeatherItem.Wind.Speed, StringFormat='Wind Speed: {0}'}" />
+        <Label
+            Text="{Binding WeatherItem.Main.TempMax, StringFormat='Max Temp: {0}'}" />
+        <Label
+            Text="{Binding WeatherItem.Main.TempMin, StringFormat='Min Temp: {0}'}" />
+        <Label
+            Text="{Binding WeatherItem.Visibility, StringFormat='Visibility: {0}'}" />
+        <Label
+            Text="{Binding WeatherItem.Main.Pressure, StringFormat='Pressure: {0}'}" />
+
+    </StackLayout>
+</ContentPage>
